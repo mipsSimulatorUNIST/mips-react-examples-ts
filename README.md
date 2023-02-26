@@ -1,5 +1,8 @@
 # MIPS-React-Examples-ts
 
+<img width="645" alt="image" src="https://user-images.githubusercontent.com/44657722/221390787-348e0b04-470e-4fe3-9f35-70b09042703b.png">
+
+
 [_demo example_ &rarr;](https://mipssimulatorunist.github.io/mips-react-examples-ts/)
 
 ## 0. Install
