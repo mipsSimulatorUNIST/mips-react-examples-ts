@@ -16,6 +16,8 @@ you can find it in `node_modules > mips-simulator-js > sample_input` or [_here_ 
 
 you can see the code of assembler in [_here_ &rarr;](https://github.com/mipsSimulatorUNIST/mips-react-examples-ts/tree/main/src/components/Assembler)
 
+[_demo example_ &rarr;](https://mipssimulatorunist.github.io/mips-react-examples-ts/)
+
 ### 2-1) Assembler Selector
 
 ```tsx
