@@ -22,7 +22,10 @@ function Binary({
         {binaryContent
           ? binaryContent.map((line, index) => {
               return (
-                <div key={index} style={{ border: "0.5px solid grey" }}>
+                <div
+                  key={index}
+                  style={{ border: "0.5px solid grey", textAlign: "center" }}
+                >
                   {line}
                 </div>
               );
