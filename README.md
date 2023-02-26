@@ -1,6 +1,7 @@
 # MIPS-React-Examples-ts
 
 <img width="645" alt="image" src="https://user-images.githubusercontent.com/44657722/221390787-348e0b04-470e-4fe3-9f35-70b09042703b.png">
+<img width="951" alt="image" src="https://user-images.githubusercontent.com/44657722/221393184-0cc1aa0f-5a57-4d99-8814-ad691b7e6c88.png">
 
 [_demo example_ &rarr;](https://mipssimulatorunist.github.io/mips-react-examples-ts/)
 
@@ -274,11 +275,12 @@ const ProgramStatus = ({ fileContent }: { fileContent: string[] }) => {
     if (fileContent) {
       fetchSimulator(fileContent);
     }
+    return () => {
+      setCount(0);
+      setResultState(null);
+      setHistoryState(null);
+    };
   }, [fileContent]);
-
-  useEffect(() => {
-    console.log(history);
-  }, [history]);
 
   return (
     <div>
@@ -334,4 +336,5 @@ const ProgramStatus = ({ fileContent }: { fileContent: string[] }) => {
 };
 
 export default ProgramStatus;
+
 ```
