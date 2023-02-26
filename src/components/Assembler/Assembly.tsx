@@ -11,15 +11,22 @@ function Assembly({
 }) {
   useEffect(() => {
     const fetchFile = async (filePath: string) => {
+      console.log(filePath);
       await fetch(filePath)
         .then((response) => response.text())
         .then((text) => {
+          console.log(text);
           setFileContent(text.split("\n"));
         });
     };
     const filePath = `sample_input/${fileName}`;
+    console.log(filePath);
     fetchFile(filePath);
   }, [fileName, setFileContent]);
+
+  useEffect(() => {
+    console.log(fileContent);
+  }, [fileContent]);
 
   return (
     <div style={{ margin: "10px" }}>
