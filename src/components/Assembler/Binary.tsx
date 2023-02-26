@@ -12,7 +12,7 @@ function Binary({
   useEffect(() => {
     const { output, mappingDetail } = assemble(fileContent);
     setBinaryContent(output);
-  }, [fileContent]);
+  }, [fileContent, fileName]);
 
   return (
     <div style={{ margin: "10px" }}>
