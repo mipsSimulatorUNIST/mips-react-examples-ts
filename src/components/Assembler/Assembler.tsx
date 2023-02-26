@@ -13,11 +13,7 @@ const Assembler = () => {
           setFileContent={setFileContent}
           fileName={"example1.s"}
         />
-        <Binary
-          fileContent={fileContent}
-          setFileContent={setFileContent}
-          fileName={"example1.s"}
-        />
+        <Binary fileContent={fileContent} fileName={"example1.s"} />
       </div>
     </>
   );

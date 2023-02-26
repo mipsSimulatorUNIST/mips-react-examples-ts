@@ -6,7 +6,6 @@ function Binary({
   fileName,
 }: {
   fileContent: string[];
-  setFileContent: React.Dispatch<React.SetStateAction<string[]>>;
   fileName: string;
 }) {
   const [binaryContent, setBinaryContent] = useState([""]);
