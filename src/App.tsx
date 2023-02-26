@@ -1,5 +1,11 @@
+import Assembler from "./components/Assembler/Assembler";
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <Assembler />
+    </div>
+  );
 }
 
 export default App;
