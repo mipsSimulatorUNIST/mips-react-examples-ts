@@ -1,44 +1,28 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy react content to Pages
-
-on:
-  workflow_dispatch:
-  push:
-    branches: ["main"]
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
+name: Deployment
+on: [push, pull_request]
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/configure-pages@v2
-      - uses: actions/setup-node@v3
+      - name: Checkout source code
+        uses: actions/checkout@master
+
+      - name: Set up Node
+        uses: actions/setup-node@master
         with:
           node-version: 16
+
       - name: Install dependencies
         run: npm install
+
       - name: Build
         run: npm run build
         env:
           CI: false
           NODE_ENV: production
 
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
