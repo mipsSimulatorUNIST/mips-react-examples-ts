@@ -2,7 +2,6 @@
 
 <img width="645" alt="image" src="https://user-images.githubusercontent.com/44657722/221390787-348e0b04-470e-4fe3-9f35-70b09042703b.png">
 
-
 [_demo example_ &rarr;](https://mipssimulatorunist.github.io/mips-react-examples-ts/)
 
 ## 0. Install
@@ -23,7 +22,9 @@ you can see the code of assembler in [_here_ &rarr;](https://github.com/mipsSimu
 
 ### 2-1) Assembler Selector
 
-```tsx
+#### Assembler.tsx
+
+```ts
 import Assembly from "./Assembly";
 import { useRef, useState } from "react";
 import Binary from "./Binary";
@@ -73,7 +74,9 @@ export default Assembler;
 
 ### 2-2) Assembly Language
 
-```tsx
+#### Assembly.tsx
+
+```ts
 import { useEffect } from "react";
 
 function Assembly({
@@ -93,7 +96,7 @@ function Assembly({
           setFileContent(text.split("\n"));
         });
     };
-    const filePath = `sample_input/${fileName}`;
+    const filePath = `${process.env.PUBLIC_URL}/sample_input/${fileName}`;
     fetchFile(filePath);
   }, [fileName, setFileContent]);
 
@@ -123,7 +126,9 @@ export default Assembly;
 
 ### 2-3) Binary Language
 
-```tsx
+#### Binary.tsx
+
+```ts
 import { assemble } from "mips-simulator-js/dist";
 import { useEffect, useState } from "react";
 
