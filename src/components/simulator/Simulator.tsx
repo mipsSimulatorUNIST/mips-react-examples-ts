@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import Assembly from "../Assembler/Assembly";
 import Binary from "../Assembler/Binary";
+import ProgramStatus from "./ProgramStatus";
 
 const Simulator = () => {
   const options = useRef([
@@ -13,12 +14,13 @@ const Simulator = () => {
     { value: "example7.s", label: "example7.s" },
   ]);
 
-  const [fileContent, setFileContent] = useState(["Loading..."]);
+  const [fileContent, setFileContent] = useState<string[]>([]);
   const [fileName, setFileName] = useState(options.current[0].value);
 
   const handleSelector = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setFileName(event.target.value);
   };
+
   return (
     <div>
       <h1>Simulator Example</h1>
@@ -36,6 +38,7 @@ const Simulator = () => {
           fileName={fileName}
         />
         <Binary fileContent={fileContent} fileName={fileName} />
+        <ProgramStatus fileContent={fileContent} />
       </div>
     </div>
   );
