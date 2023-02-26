@@ -1,5 +1,6 @@
 {
   "name": "mips-react-examples-ts",
+  "homepage": "https://mipsSimulatorUNIST.github.io/mips-react-examples-ts/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
