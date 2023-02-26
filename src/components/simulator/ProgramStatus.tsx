@@ -40,11 +40,12 @@ const ProgramStatus = ({ fileContent }: { fileContent: string[] }) => {
     if (fileContent) {
       fetchSimulator(fileContent);
     }
+    return () => {
+      setCount(0);
+      setResultState(null);
+      setHistoryState(null);
+    };
   }, [fileContent]);
-
-  useEffect(() => {
-    console.log(history);
-  }, [history]);
 
   return (
     <div>
