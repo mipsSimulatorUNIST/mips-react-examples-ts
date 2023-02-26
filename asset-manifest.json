@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/mips-react-examples-ts/static/js/main.0eaa33cf.js",
+    "main.js": "/mips-react-examples-ts/static/js/main.e641d92f.js",
     "index.html": "/mips-react-examples-ts/index.html",
-    "main.0eaa33cf.js.map": "/mips-react-examples-ts/static/js/main.0eaa33cf.js.map"
+    "main.e641d92f.js.map": "/mips-react-examples-ts/static/js/main.e641d92f.js.map"
   },
   "entrypoints": [
-    "static/js/main.0eaa33cf.js"
+    "static/js/main.e641d92f.js"
   ]
 }
