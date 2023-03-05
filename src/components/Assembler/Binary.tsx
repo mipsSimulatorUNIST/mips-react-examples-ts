@@ -1,4 +1,4 @@
-import { assemble } from "mips-simulator-js/dist";
+import { assemble } from "mips-simulator-js";
 import { useEffect, useState } from "react";
 
 function Binary({
