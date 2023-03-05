@@ -3,7 +3,7 @@ import { simulatorOutputType } from "mips-simulator-js/dist/src/utils/functions"
 import { useEffect, useState } from "react";
 
 const ProgramStatus = ({ fileContent }: { fileContent: string[] }) => {
-  const [result, setResultState] = useState<simulatorOutputType | null>(null);
+  const [_, setResultState] = useState<simulatorOutputType | null>(null);
   const [history, setHistoryState] = useState<simulatorOutputType[] | null>(
     null
   );

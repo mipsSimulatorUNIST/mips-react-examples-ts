@@ -4,7 +4,7 @@ import Simulator from "./components/simulator/Simulator";
 
 function App() {
   const [on, setOn] = useState(true);
-  const handleOn = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleOn = () => {
     setOn((prev) => !prev);
   };
   return (

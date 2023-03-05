@@ -10,7 +10,7 @@ function Binary({
 }) {
   const [binaryContent, setBinaryContent] = useState([""]);
   useEffect(() => {
-    const { output, mappingDetail } = assemble(fileContent);
+    const { output, mappingDetail: _ } = assemble(fileContent);
     setBinaryContent(output);
   }, [fileContent, fileName]);
 
